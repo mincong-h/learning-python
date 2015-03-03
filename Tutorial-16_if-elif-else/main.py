@@ -18,4 +18,4 @@ elif name is 'Charline' :
   print("My name is Charline")
 else 
   print("You're not in our house.")
-# 1 Result : Hey, Mincong.
+# 2 Result : Hey, Mincong.
