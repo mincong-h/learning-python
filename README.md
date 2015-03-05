@@ -26,3 +26,8 @@ def download_stock_data(csv_url) :
         print(row)
     fx.close()
 ```
+
+## Program 2 : Web Crawler
+### Requirement
+This webcrawler is using the <a>beautifulsoup4</a> module.<br>
+#### For Mac
