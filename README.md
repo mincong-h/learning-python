@@ -28,6 +28,11 @@ def download_stock_data(csv_url) :
 ```
 
 ## Program 2 : Web Crawler
-### Requirement
-This webcrawler is using the <a>beautifulsoup4</a> module.<br>
-#### For Mac
+### Requirement and installation(for Mac)
+This webcrawler is using the <a href="http://www.crummy.com/software/BeautifulSoup/bs4/doc/"><b>beautifulsoup4</b></a> module.<br> You need to download it from the internet, then release it.
+When the files has been released successfully, you need to install this module. For Mac user, you can install the <a href="http://www.crummy.com/software/BeautifulSoup/bs4/doc/"><b>beautifulsoup4</b></a> by using the Terminal command : entre the file's path by the <code>cd</code> command, then use <code>sudo python3.4 ./setup.py install</code> to install.<br> For more informations, here are some useful links :<br>
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=XjNm9bazxn8&index=25&list=PL6gx4Cwl9DGAcbMi1sH6oAMk4JHw91mC_">Python Programming Tutorial - 25 - How to Build a Web Crawler (1/3)</a></li>
+  <li><a href="http://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-beautiful-soup">Installing Beautiful Soup</a></li>
+  <li><b>#CN </b><a href="http://www.jackman.cn/?p=980">在MAC 中安装BEAUTIFULSOUP FOR PYTHON3.3</a></li>
+</ul>
