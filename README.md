@@ -36,3 +36,32 @@ When the files has been released successfully, you need to install this module. 
   <li><a href="http://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-beautiful-soup">Installing Beautiful Soup</a></li>
   <li><b>#CN </b><a href="http://www.jackman.cn/?p=980">在MAC 中安装BEAUTIFULSOUP FOR PYTHON3.3</a></li>
 </ul>
+```python
+'''
+Python 3.4
+'''
+
+
+import urllib.request
+from bs4 import BeautifulSoup
+
+
+def trade_spider(max_pages):
+    page = 1
+    while page <= max_pages:
+        # code loading
+        url = 'https://www.thenewboston.com/trade/search.php?page=' + str(page)
+        source_code = urllib.request.urlopen(url)
+        plain_text = source_code.read()
+        # transformation
+        soup = BeautifulSoup(plain_text)
+        # get links
+        for link in soup.find_all('a'):
+            href = link.get('href')
+            print(href)
+        # next page
+        page += 1
+
+
+trade_spider(2)
+```
