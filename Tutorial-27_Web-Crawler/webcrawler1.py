@@ -1,5 +1,5 @@
 '''
-Requirement: Python 3.4
+Python 3.4
 '''
 
 
@@ -19,7 +19,14 @@ def trade_spider(max_pages):
         # get links
         for link in soup.find_all('a'):
             href = link.get('href')
-            print(href)
+            if href[:4] != 'http':
+                if href[0] == '/':
+                    url_complete = url + href
+                else:
+                    url_complete = url + '/' + href
+            else:
+                url_complete = url
+            print(url_complete)
         # next page
         page += 1
 
