@@ -10,14 +10,17 @@ from bs4 import BeautifulSoup
 def trade_spider(max_pages):
     page = 1
     while page <= max_pages:
+        # code loading
         url = 'https://www.thenewboston.com/trade/search.php?page=' + str(page)
         source_code = urllib.request.urlopen(url)
-        print(source_code.read())
-        plain_text = str(source_code.read)
+        plain_text = source_code.read()
+        # transformation
         soup = BeautifulSoup(plain_text)
-        for link in soup.findAll('a', {'class': 'item-name'}):
+        # get links
+        for link in soup.find_all('a'):
             href = link.get('href')
             print(href)
+        # next page
         page += 1
 
 
