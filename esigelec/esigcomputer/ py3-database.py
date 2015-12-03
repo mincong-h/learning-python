@@ -15,9 +15,9 @@ import timeit
 import random as rd
 
 
-__author__ = "Mincong HUANG"
+__author__ = "Yifan DU"
 __version__ = "1.0.0"
-__email__ = "mincong.h@gmail.com"
+__email__ = "yifan.du.14@gmail.com"
 
 
 def db_connect(host):
