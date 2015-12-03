@@ -25,15 +25,15 @@ def db_connect(host):
     Create a database connection
     """
     try:
-        print "Connecting to host = " + host + "..."
+        print ("Connecting to host = " + host + "...")
         conn = MySQLdb.connect (host = host,
                                 user = "root",
                                 passwd = "root",
                                 db = "infostats")
-    except MySQLdb.Error, e:
-        print "Error %d: %s" % (e.args[0], e.args[1])
+    except MySQLdb.Error as e:
+        print ("Error %d: %s" % (e.args[0], e.args[1]))
         sys.exit (1)
-    print  "Connected."
+    print  ("Connected.")
     return conn
 
 
@@ -42,7 +42,7 @@ def db_close(conn):
     Close database connection
     """
     conn.close()
-    print "Connection closed."
+    print ("Connection closed.")
 
 
 def get_dataset(conn):
@@ -69,7 +69,7 @@ def insert_data(conn):
         cursor.execute("""INSERT INTO trace (timestamp, total_distance, volume) VALUES
                 (%s, %s, %s)""", (timeit.default_timer(), new_d, new_v))
         conn.commit()
-        print "Row inserted."
+        print ("Row inserted.")
     except:
         conn.rollback()
 
@@ -78,11 +78,11 @@ def display(dataset):
     """
     Display input dataset.
     """
-    print "\n------------------ display ------------------"
-    print "        id    timestamp    total_d     volume"
+    print ("\n------------------ display ------------------")
+    print ("        id    timestamp    total_d     volume")
     for row in dataset:
-        print "%10.0f %12.0f %10.2f %10.2f" % (row[0], row[1], row[2], row[3])
-    print "---------------------------------------------"
+        print ("%10.0f %12.0f %10.2f %10.2f" % (row[0], row[1], row[2], row[3]))
+    print ("---------------------------------------------")
     
 
 def run_select_exmpl(host):
@@ -94,9 +94,9 @@ def run_select_exmpl(host):
         dataset = get_dataset(conn)
         display(dataset)
         db_close(conn)
-    except MySQLdb.Error, e:
-        print "Senario SELECT failed."
-        print "Error %d: %s" % (e.args[0], e.args[1])
+    except MySQLdb.Error as e:
+        print ("Senario SELECT failed.")
+        print ("Error %d: %s" % (e.args[0], e.args[1]))
 
 
 def run_insert_exmpl(host):
@@ -107,9 +107,9 @@ def run_insert_exmpl(host):
         conn = db_connect(host)
         insert_data(conn)
         db_close(conn)
-    except MySQLdb.Error, e:
-        print "Senario INSERT failed."
-        print "Error %d: %s" % (e.args[0], e.args[1])
+    except MySQLdb.Error as e:
+        print ("Senario INSERT failed.")
+        print ("Error %d: %s" % (e.args[0], e.args[1]))
 
 
 #main
@@ -121,5 +121,5 @@ run_insert_exmpl(host)
 run_select_exmpl(host)
 # performance calculation
 stop = timeit.default_timer()
-print "runtime: %10.3fms" % ((stop - start) * 1000 )
+print ("runtime: %10.3fms" % ((stop - start) * 1000 ))
 
