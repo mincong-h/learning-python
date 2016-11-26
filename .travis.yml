@@ -3,4 +3,4 @@ python:
   - "2.7"
 script:
   # recursive test execution via the command line
-  - python -m unittest discover .
+  - python -m unittest discover . "*_test.py"
