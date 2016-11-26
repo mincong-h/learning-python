@@ -1,0 +1,6 @@
+language: python
+python:
+  - "2.7"
+script:
+  # recursive test execution via the command line
+  - python -m unittest discover .
