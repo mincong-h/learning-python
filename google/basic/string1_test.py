@@ -1,9 +1,10 @@
-#!/usr/bin/python -tt
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 import string1 as s
 import unittest
 
-class TestStringMethods(unittest.TestCase):
+class TestString1(unittest.TestCase):
 
   def test_donuts(self):
     self.assertEqual(s.donuts(4), 'Number of donuts: 4')

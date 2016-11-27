@@ -1,9 +1,10 @@
-#!/usr/bin/python -tt
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 import unittest
 import string2 as s
 
-class TestStringMethods(unittest.TestCase):
+class TestString2(unittest.TestCase):
 
   def test_verbing(self):
     self.assertEqual(s.verbing('hail'), 'hailing')
