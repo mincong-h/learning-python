@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from contextlib import contextmanager
-import tutorial_3_variables as tutorial
 import unittest
 
 
