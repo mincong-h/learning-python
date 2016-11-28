@@ -9,7 +9,6 @@ class TestSlicing(unittest.TestCase):
   def test_slicing(self):
     nums = [0, 1, 2, 3, 4, 5]
     self.assertEqual(nums[1:3], [1, 2])
-    self.assertEqual(nums[1, 4], [1, 2, 3])
     self.assertEqual(nums[1:], [1, 2, 3, 4, 5])
     self.assertEqual(nums[:4], [0, 1, 2, 3])
     self.assertEqual(nums[:], [0, 1, 2, 3, 4, 5])
