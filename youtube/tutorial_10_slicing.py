@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# -*- conding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 import unittest
 
