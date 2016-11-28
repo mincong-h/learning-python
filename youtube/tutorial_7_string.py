@@ -8,7 +8,7 @@ class Person:
     self.name = name
 
   def __repr__(self):
-    return "Hi, my name is " + self.name + "!"
+    return 'Hi, my name is ' + self.name + '!'
 
 
 def main():
