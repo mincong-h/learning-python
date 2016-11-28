@@ -20,10 +20,10 @@ class TestStringOperations(unittest.TestCase):
   def test_repr(self):
     person = tutorial.Person('Tom')
     self.assertEqual(person.name, 'Tom')
-    self.assertEqual(repr(person), "Hi, my name is Tom!")
+    self.assertEqual(repr(person), 'Hi, my name is Tom!')
     # If __repr__ is overridden, __str__ is overridden too.
     # But not vice versa.
-    self.assertEqual(str(person), "Hi, my name is Tom!")
+    self.assertEqual(str(person), 'Hi, my name is Tom!')
 
 
 if __name__ == '__main__':
