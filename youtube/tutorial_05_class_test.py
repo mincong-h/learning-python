@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import tutorial_5_class as tutorial
+import tutorial_05_class as tutorial
 import unittest
 
 
