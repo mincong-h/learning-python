@@ -4,16 +4,13 @@
 
 I'm learning Python by following different tutorials:
 
-* YouTube Tutorial [Python 3.4 Programming Tutorials][youtube-34] by
-  _thenewboston_
-* YouTube Tutorial [Programming Tutorials][youtube-27] by _thenewboston_
-* Google Tutorial [Google's Python Class][google]
-* Coursera Tutorial [用Python玩转数据(Data processing using Python)][coursera]
-  by _ZHANG Li_.
+* [Python 3.4 Programming Tutorials][youtube-34] by thenewboston
+* [Programming Tutorials][youtube-27] by thenewboston
+* [Google's Python Class][google] by Google
+* [用Python玩转数据(Data processing using Python)][coursera] by ZHANG Li
 
-The repo have been tested using Python built-in unit testing framework
-**[unittest][unittest]** and linked to Travis CI. You can use the command below
-to run all the tests:
+The repo has been tested by the built-in unit testing framework
+**[unittest][unittest]** under Python 2.7. You can run these tests using:
 
     python -m unittest discover . "*_test.py"
 
