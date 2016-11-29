@@ -12,16 +12,16 @@ goog_url = 'http://real-chart.finance.yahoo.com/table.csv?s=GOOG&d=2&e=4&f=2015&
 
 # definition
 def download_stock_data(csv_url) :
-    response = request.urlopen(csv_url)
-    csv = response.read()
-    csv_str = str(csv)
-    rows = csv_str.split("\\n")
-    dest_url = r'/Users/huangmincong/desktop/goog.csv' # destion file's name for Mac
-    fx = open(dest_url, "w")
-    for row in rows :
-        fx.write(row + "\n")
-        print(row)
-    fx.close()
+  response = request.urlopen(csv_url)
+  csv = response.read()
+  csv_str = str(csv)
+  rows = csv_str.split("\\n")
+  dest_url = r'/Users/huangmincong/desktop/goog.csv' # destion file's name for Mac
+  fx = open(dest_url, "w")
+  for row in rows :
+    fx.write(row + "\n")
+    print(row)
+  fx.close()
 
 # execution
 download_stock_data(goog_url)
