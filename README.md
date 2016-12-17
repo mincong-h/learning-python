@@ -16,8 +16,8 @@ The repo has been tested by the built-in unit testing framework
 
 [coursera]: https://www.coursera.org/learn/hipython
 [google]: https://developers.google.com/edu/python/
-[travis]: https://travis-ci.org/mincong-h/python
-[travis-img]: https://travis-ci.org/mincong-h/python.svg?branch=master
+[travis]: https://travis-ci.org/mincong-h/learning-python
+[travis-img]: https://travis-ci.org/mincong-h/learning-python.svg?branch=master
 [unittest]: https://docs.python.org/2/library/unittest.html
 [youtube-27]: https://www.youtube.com/playlist?list=PLEA1FEF17E1E5C0DA
 [youtube-34]: https://www.youtube.com/watch?v=HBxCHonP6Ro&list=PL6gx4Cwl9DGAcbMi1sH6oAMk4JHw91mC_
