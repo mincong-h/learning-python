@@ -18,27 +18,21 @@ class Artifact:
 
     @staticmethod
     def split(s):
-        if s.endswith(('.jar', '.jar.md5', '.jar.sha1')):
-            m = s.rindex('.jar')
-            return s[:m], s[m:]
-
-        if s.endswith(('.pom', '.pom.md5', '.pom.sha1')):
-            m = s.rindex('.pom')
-            return s[:m], s[m:]
-
-        if s.endswith(('.version', '.version.md5', '.version.sha1')):
-            m = s.rindex('.version')
-            return s[:m], s[m:]
+        if s.endswith(('.md5', '.sha1')):
+            i = s.rindex('.', 0, len(s) - 5)
+        else:
+            i = s.rindex('.')
+        return s[:i], s[i:]
 
 
-def main(projects_dir):
+def scan(path):
     release_count = 0
     miss_count = 0
     miss_types = {'.version': 0, '.version.md5': 0, '.version.sha1': 0,
                   '.jar': 0, '.jar.md5': 0, '.jar.sha1': 0,
                   '.pom': 0, '.pom.md5': 0, '.pom.sha1': 0}
 
-    for curr, sub_dirs, files in os.walk(projects_dir):
+    for curr, sub_dirs, files in os.walk(path):
         project = os.path.basename(curr)
         # Skip work-in-progress (WIP) and SNAPSHOT
         if project.startswith('wip--') or project.endswith('-SNAPSHOT'):
@@ -74,8 +68,13 @@ def main(projects_dir):
     print "Finished."
 
 
+def main():
+    if len(sys.argv) != 2:
+        print 'usage: list_releases.py /path/to/releases'
+        exit()
+    path = sys.argv[1]
+    scan(path)
+
+
 if __name__ == '__main__':
-    if len(sys.argv) == 2:
-        main(sys.argv[1])
-    else:
-        print 'usage: ./list_releases.py /path/to/releases'
+    main()
