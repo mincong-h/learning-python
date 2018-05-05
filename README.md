@@ -1,6 +1,4 @@
-[![Build Status][travis-img]][travis]
-
-# Learning Python
+# Learning Python [![Build Status][travis-img]][travis]
 
 I'm learning Python by following different tutorials:
 
