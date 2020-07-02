@@ -1,4 +1,5 @@
 language: python
 python: 3.8
 script:
-  - pytest
+  - python -m pip install -r requirements-tests.txt
+  - coverage run -m pytest -vv --strict
