@@ -2,6 +2,7 @@ language: python
 python: 3.6
 env:
   - TOXENV=py36
+  - TOXENV=py37
 script:
   - pip install tox
   - tox
