@@ -1,5 +1,7 @@
 language: python
-python: 3.8
+python: 3.6
+env:
+  - TOXENV=py36
 script:
-  - python -m pip install -r requirements-tests.txt
-  - coverage run -m pytest -vv --strict
+  - pip install tox
+  - tox
