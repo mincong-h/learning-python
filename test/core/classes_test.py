@@ -1,6 +1,8 @@
 from src.core.classes import *
 
 
+# ----- Named Tuple -----
+
 def test_named_tuple_creation_with_keyword():
     user = User(first_name="foo", last_name="bar", email="foo.bar@example.com")
 
@@ -23,6 +25,9 @@ def test_named_tuple_equality():
 
     assert u1 == u2
     assert hash(u1) == hash(u2)
+
+
+# ----- Enum -----
 
 
 def test_enum_values():
@@ -58,6 +63,9 @@ def test_enum_lookup():
     assert Difficulty(3) is Difficulty.HARD
 
 
+# ----- Int Flag (Enum)  -----
+
+
 def test_enum_int_flag_combination():
     assert Permission.R in Permission.RW
     assert Permission.W in Permission.RW
@@ -80,3 +88,7 @@ def test_enum_int_flag_lookup():
 def test_enum_int_flag_iteration():
     for p in Permission:
         assert isinstance(p, Permission)
+
+
+def test_enum_int_flag_to_string():
+    assert str(Permission.RWX) == "Permission.RWX"

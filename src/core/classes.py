@@ -2,6 +2,10 @@ from enum import Enum, IntFlag
 from typing import NamedTuple
 
 
+#
+# typing — Support for type hints
+# https://docs.python.org/3/library/typing.html#typing.NamedTuple
+#
 class User(NamedTuple):
     first_name: str
     last_name: str
@@ -18,6 +22,10 @@ class Difficulty(Enum):
     HARD = 3
 
 
+#
+# IntFlag
+# https://docs.python.org/3/library/enum.html#intflag
+#
 class Permission(IntFlag):
     R = 4  # readable
     W = 2  # writable
