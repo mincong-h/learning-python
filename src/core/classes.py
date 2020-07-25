@@ -1,4 +1,4 @@
-from enum import Enum
+from enum import Enum, IntFlag
 from typing import NamedTuple
 
 
@@ -16,3 +16,11 @@ class Difficulty(Enum):
     EASY = 1
     MEDIUM = 2
     HARD = 3
+
+
+class Permission(IntFlag):
+    R = 4  # readable
+    W = 2  # writable
+    X = 1  # executable
+    RW = R | W
+    RWX = R | W | X

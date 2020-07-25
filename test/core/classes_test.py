@@ -56,3 +56,27 @@ def test_enum_lookup():
     assert Difficulty(1) is Difficulty.EASY
     assert Difficulty(2) is Difficulty.MEDIUM
     assert Difficulty(3) is Difficulty.HARD
+
+
+def test_enum_int_flag_combination():
+    assert Permission.R in Permission.RW
+    assert Permission.W in Permission.RW
+
+    assert Permission.R in Permission.RWX
+    assert Permission.W in Permission.RWX
+    assert Permission.X in Permission.RWX
+
+
+def test_enum_int_flag_lookup():
+    assert Permission["R"] is Permission.R
+
+    assert Permission(7) is Permission.RWX
+    assert Permission(6) is Permission.RW
+    assert Permission(4) is Permission.R
+    assert Permission(2) is Permission.W
+    assert Permission(1) is Permission.X
+
+
+def test_enum_int_flag_iteration():
+    for p in Permission:
+        assert isinstance(p, Permission)
