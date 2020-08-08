@@ -3,6 +3,7 @@ from src.core.classes import *
 
 # ----- Named Tuple -----
 
+
 def test_named_tuple_creation_with_keyword():
     user = User(first_name="foo", last_name="bar", email="foo.bar@example.com")
 
