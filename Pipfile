@@ -1,0 +1,8 @@
+[packages]
+
+[dev-packages]
+pytest = "==5.0.1"
+coverage = "==4.5.3"
+
+[requires]
+python_version = "3.7"
