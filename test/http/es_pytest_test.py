@@ -1,5 +1,4 @@
 import responses
-import requests
 
 from src.http import es
 
