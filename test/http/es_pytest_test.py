@@ -6,10 +6,11 @@ from src.http import es
 
 @responses.activate
 def test_simple():
+    # Given
     responses.add(
         responses.GET,
         "http://localhost:9200",
-        status=404,
+        status=200,
         json={
             "name": "8426206b7d62",
             "cluster_name": "docker-cluster",
@@ -29,8 +30,10 @@ def test_simple():
         },
     )
 
+    # When
     summary = es.ping_elasticsearch()
 
+    # Then
     assert (
         summary
         == """\
@@ -44,3 +47,4 @@ Summary:
 
     assert len(responses.calls) == 1
     assert responses.calls[0].request.url == "http://localhost:9200/"
+    assert responses.calls[0].response.status_code == 200
