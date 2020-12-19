@@ -28,7 +28,16 @@ Enable shell:
 $ pipenv shell
 ```
 
+Enable completion:
+
+```sh
+# You can add it to dotfiles, such as ~/.bash_profile
+$ eval "$(pipenv --completion)"
+```
+
 ## References
 
 - Should I put `#!` (shebang) in Python scripts, and what form should it take?
   <https://stackoverflow.com/questions/6908143>
+- Advanced Usage of Pipenv
+  <https://pipenv-fork.readthedocs.io/en/latest/advanced.html>
