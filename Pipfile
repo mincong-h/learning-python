@@ -1,4 +1,5 @@
 [packages]
+requests = "==2.25.1"
 
 [dev-packages]
 pytest = "==5.0.1"
