@@ -35,6 +35,12 @@ Enable completion:
 $ eval "$(pipenv --completion)"
 ```
 
+Update `requirements-tests.txt`:
+
+```
+$ pipenv lock --dev --requirements > requirements-tests.txt
+```
+
 ## References
 
 - Should I put `#!` (shebang) in Python scripts, and what form should it take?
