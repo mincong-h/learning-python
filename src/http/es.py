@@ -2,7 +2,7 @@
 import requests
 
 
-def ping_elasticsearch():
+def ping_elasticsearch() -> str:
     response = requests.get("http://localhost:9200")
     info = response.json()
     # {
@@ -22,18 +22,18 @@ def ping_elasticsearch():
     #   },
     #   "tagline" : "You Know, for Search"
     # }
-    summary = f"""\
+    return f"""\
 Summary:
-  name: {info["name"]}
-  cluster_name: {info["cluster_name"]}
-  cluster_uuid: {info["cluster_uuid"]}
-  version: {info["version"]["number"]}
+  name: "{info["name"]}"
+  cluster_name: "{info["cluster_name"]}"
+  cluster_uuid: "{info["cluster_uuid"]}"
+  version: "{info["version"]["number"]}"
 """
-    print(summary)
 
 
 def main():
-    ping_elasticsearch()
+    summary = ping_elasticsearch()
+    print(summary)
 
 
 if __name__ == "__main__":
