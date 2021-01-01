@@ -56,3 +56,11 @@ Now, check the current version of Python:
 > python3 --version
 Python 3.7.9
 ```
+
+## Cleanup
+
+Cleanup a package after uninstall:
+
+```sh
+> brew cleanup python@3.7
+```
