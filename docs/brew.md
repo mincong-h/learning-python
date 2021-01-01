@@ -49,3 +49,10 @@ Linking /usr/local/Cellar/python@3.7/3.7.9_2... 28 symlinks created
 If you need to have this software first in your PATH instead consider running:
   echo 'export PATH="/usr/local/opt/python@3.7/bin:$PATH"' >> ~/.zshrc
 ```
+
+Now, check the current version of Python:
+
+```sh
+> python3 --version
+Python 3.7.9
+```
