@@ -64,3 +64,9 @@ Cleanup a package after uninstall:
 ```sh
 > brew cleanup python@3.7
 ```
+
+## Clear Cache
+
+```sh
+> rm -rf "$(brew --cache)"
+```
