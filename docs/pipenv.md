@@ -1,6 +1,9 @@
 # pipenv
 
-<https://pipenv.pypa.io/en/latest/>
+Item | Link
+:--- | :---
+Overview | <https://pipenv.pypa.io/en/latest/>
+CLI | <https://pipenv.pypa.io/en/latest/cli/>
 
 Tool installation:
 
