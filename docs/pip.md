@@ -1,5 +1,7 @@
 # pip
 
+## List
+
 List available packages:
 
 ```sh
@@ -19,3 +21,14 @@ setuptools      50.3.2
 six             1.15.0
 wheel           0.35.1
 ```
+
+## Upgrade
+
+> WARNING: You are using pip version 19.2.3, however version 20.3.3 is available.
+> You should consider upgrading via the 'pip install --upgrade pip' command.
+
+```sh
+> pip install --upgrade pip
+```
+
+You may need `sudo` to grant permissions.
