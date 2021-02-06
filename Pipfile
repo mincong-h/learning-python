@@ -1,4 +1,5 @@
 [packages]
+Jinja2 = "==2.11.3"
 requests = "==2.25.1"
 
 [dev-packages]
