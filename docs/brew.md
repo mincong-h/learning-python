@@ -65,6 +65,14 @@ Cleanup a package after uninstall:
 > brew cleanup python@3.7
 ```
 
+## Upgrade
+
+Upgrade a package to a newer version:
+
+```sh
+> brew upgrade python@3.7
+```
+
 ## Clear Cache
 
 ```sh
