@@ -1,14 +1,16 @@
 import os
-from typing import NamedTuple
+from dataclasses import dataclass
 
 from jinja2 import FileSystemLoader, Environment
 
 
-class ClusterConfig(NamedTuple):
+@dataclass
+class ClusterConfig:
     name: str
 
 
-class NodeConfig(NamedTuple):
+@dataclass
+class NodeConfig:
     name: str
 
 
