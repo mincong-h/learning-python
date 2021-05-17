@@ -44,6 +44,12 @@ Update `requirements-tests.txt`:
 $ pipenv lock --dev --requirements > requirements-tests.txt
 ```
 
+Uninstall project:
+
+```
+$ pipenv --rm
+```
+
 ## References
 
 - Should I put `#!` (shebang) in Python scripts, and what form should it take?
