@@ -1,6 +1,7 @@
 [packages]
 Jinja2 = "==2.11.3"
 requests = "==2.25.1"
+eventlet = "==0.31.0"
 
 [dev-packages]
 coverage = "==4.5.3"
