@@ -2,6 +2,27 @@
 
 Install Python using [Homebrew](https://brew.sh/).
 
+## Search
+
+Which Python do you want to install?
+
+```sh
+> brew search python
+==> Formulae
+app-engine-python             ptpython                      python@3.8
+boost-python                  python-launcher               python@3.9 ✔
+boost-python3                 python-markdown               reorder-python-imports
+bpython                       python-tabulate               wxpython
+gst-python                    python-tk@3.9                 pythran
+ipython                       python-yq                     jython
+micropython                   python@3.7 ✔                  cython
+==> Casks
+awips-python                                  mysql-connector-python
+
+If you meant "python" specifically:
+It was migrated from homebrew/cask to homebrew/core.
+```
+
 ## Install
 
 Install a specific version of Python, such as 3.7:
