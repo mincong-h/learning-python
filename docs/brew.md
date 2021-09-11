@@ -85,6 +85,12 @@ Python 3.7.9
 Uninstalling /usr/local/Cellar/python@3.7/3.7.10_2... (4,550 files, 71.7MB)
 ```
 
+## Reinstall
+
+```sh
+> brew reinstall python@3.7
+```
+
 ## Cleanup
 
 Cleanup a package after uninstall:
