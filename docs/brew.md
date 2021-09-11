@@ -57,6 +57,13 @@ Now, check the current version of Python:
 Python 3.7.9
 ```
 
+## Uninstall
+
+```sh
+> brew uninstall python@3.7
+Uninstalling /usr/local/Cellar/python@3.7/3.7.10_2... (4,550 files, 71.7MB)
+```
+
 ## Cleanup
 
 Cleanup a package after uninstall:
